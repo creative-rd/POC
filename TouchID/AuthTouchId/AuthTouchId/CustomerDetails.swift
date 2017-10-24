@@ -15,12 +15,20 @@ public struct CustomerDetails {
   var phoneNumber: String
   var email: String
   
-  init(name: String, ssn: String, address: String, phoneNumber: String, email:String) {
+  var custid: String
+  var accountopendate: String
+  var dob: String
+  
+
+  init(name: String, ssn: String, address: String, phoneNumber: String, email:String, custid: String, dob: String, accountopendate: String) {
     self.name = name
     self.ssn = ssn
     self.address = address
     self.phoneNumber = phoneNumber
     self.email = email
+    self.custid = custid
+    self.dob = dob
+    self.accountopendate = accountopendate
   }
 }
 

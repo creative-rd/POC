@@ -31,11 +31,15 @@ final class RestAPIParser: NSObject {
       let address = dict["address"] as? String,
       let phone = dict["phone"] as? String,
       let email = dict["email"] as? String,
-      let ssn = dict["ssn"] as? String else {
+      let ssn = dict["ssn"] as? String ,
+      let custid = dict["custid"] as? String,
+      let dob = dict["dob"] as? String,
+      let accountopendate = dict["accountopendate"] as? String
+    else {
         return nil
     }
     
-    return CustomerDetails.init(name: name, ssn: ssn, address: address, phoneNumber: phone, email: email)
+    return CustomerDetails.init(name: name, ssn: ssn, address: address, phoneNumber: phone, email: email, custid: custid, dob: dob, accountopendate: accountopendate)
   }
   
   static func getCustomerDetailsFromLocal() -> CustomerDetails? {

@@ -15,6 +15,9 @@ class CustomerDetailsViewController: UIViewController {
   @IBOutlet weak var address: UILabel!
   @IBOutlet weak var phoneNumber: UILabel!
   @IBOutlet weak var email: UILabel!
+  @IBOutlet weak var custid: UILabel!
+  @IBOutlet weak var accountopendate: UILabel!
+  @IBOutlet weak var dob: UILabel!
   
   var customerDetails: CustomerDetailsViewModel?
   var customer: Customer!
@@ -33,6 +36,9 @@ class CustomerDetailsViewController: UIViewController {
         self.address.text = cust?.address
         self.phoneNumber.text = cust?.phoneNumber
         self.email.text = cust?.email
+        self.custid.text =  cust?.custid
+        self.accountopendate.text = cust?.accountopendate
+        self.dob.text = cust?.dob
       }
     })
   }
