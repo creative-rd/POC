@@ -769,23 +769,23 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Nishant                                         Below are your details from                 Customer 360" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-aM-mf9">
-                                <rect key="frame" x="16" y="40" width="343" height="100"/>
+                                <rect key="frame" x="16" y="70" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.2274509804" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4x7-uT-D47"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-BF-Iws">
-                                <rect key="frame" x="88" y="502" width="200" height="35"/>
+                                <rect key="frame" x="38" y="502" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.2274509804" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="6E0-Ag-AH9"/>
-                                    <constraint firstAttribute="height" constant="35" id="GA8-h0-PJY"/>
+                                    <constraint firstAttribute="width" constant="300" id="6E0-Ag-AH9"/>
+                                    <constraint firstAttribute="height" constant="50" id="GA8-h0-PJY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="27"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="close:" destination="cSc-tu-7hr" eventType="touchUpInside" id="lM8-GK-6pa"/>
@@ -799,7 +799,7 @@
                             <constraint firstItem="Sug-aM-mf9" firstAttribute="leading" secondItem="a8L-9z-v7k" secondAttribute="leadingMargin" id="Fa1-3z-2aO"/>
                             <constraint firstItem="0D6-X7-XqH" firstAttribute="centerY" secondItem="a8L-9z-v7k" secondAttribute="centerY" id="JLc-NZ-73X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sug-aM-mf9" secondAttribute="trailing" id="W3K-Kd-bzi"/>
-                            <constraint firstItem="Sug-aM-mf9" firstAttribute="top" secondItem="iU4-v1-MpK" secondAttribute="bottom" constant="20" id="Wiu-eS-aCW"/>
+                            <constraint firstItem="Sug-aM-mf9" firstAttribute="top" secondItem="iU4-v1-MpK" secondAttribute="bottom" constant="50" id="Wiu-eS-aCW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0D6-X7-XqH" secondAttribute="trailing" id="jzx-Ml-DTV"/>
                             <constraint firstItem="0D6-X7-XqH" firstAttribute="leading" secondItem="a8L-9z-v7k" secondAttribute="leadingMargin" id="qjx-UA-hXb"/>
                             <constraint firstItem="qAL-BF-Iws" firstAttribute="top" secondItem="0D6-X7-XqH" secondAttribute="bottom" constant="68" id="rnb-8F-qZe"/>
