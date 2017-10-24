@@ -66,6 +66,10 @@ class HomeViewController: UIViewController {
     self.present(viewController, animated: true)
   }
   
+  @IBAction func signOut(_ sender: Any) {
+    
+  }
+  
   
   deinit {
     print("Deinitialized Home View Controller")

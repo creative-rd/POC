@@ -20,8 +20,7 @@ class ApprovedCreditCardsViewController: UIViewController {
     images = [
       UIImage.init(named: "Card1")!,
       UIImage.init(named: "Card2")!,
-      UIImage.init(named: "Card4")!,
-      UIImage.init(named: "Card3")!
+      UIImage.init(named: "Card4")!
     ]
   }
   

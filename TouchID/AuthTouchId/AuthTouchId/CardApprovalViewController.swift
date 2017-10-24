@@ -20,12 +20,11 @@ class CardApprovalViewController: UIViewController, NVActivityIndicatorViewable 
     images = [
       UIImage.init(named: "Card1")!,
       UIImage.init(named: "Card2")!,
-      UIImage.init(named: "Card4")!,
-      UIImage.init(named: "Card3")!
+      UIImage.init(named: "Card4")!
     ]
     
     let size = CGSize(width: 50, height: 50)
-    startAnimating(size, message: "Approving Please wait !!", type: NVActivityIndicatorType(rawValue: 3)!)
+    startAnimating(size, message: "Approving Please wait !!", type: NVActivityIndicatorType(rawValue: 23)!)
     
     self.view.backgroundColor = .clear
     self.view.isOpaque = false

@@ -178,30 +178,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-zS-RU0">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRh-Ji-hWg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Nishant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRh-Ji-hWg">
+                                        <rect key="frame" x="96" y="0.0" width="185" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1VB-cT-PId"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <color key="textColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-IN-kgk">
-                                        <rect key="frame" x="320" y="9" width="32" height="32"/>
+                                        <rect key="frame" x="306" y="9" width="61" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="user (1)">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Sign Out">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="userDetails:" destination="OCF-V3-GjC" eventType="touchUpInside" id="SBt-y5-cza"/>
+                                            <action selector="signOut:" destination="OCF-V3-GjC" eventType="touchUpInside" id="VSx-ur-oUt"/>
+                                            <segue destination="rIp-dg-1qK" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="gXh-70-Jp9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqz-F7-Dfj">
+                                        <rect key="frame" x="28" y="11" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="user (1)"/>
+                                        <connections>
+                                            <action selector="userDetails:" destination="OCF-V3-GjC" eventType="touchUpInside" id="Whs-vD-66A"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.2274509804" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="kRh-Ji-hWg" firstAttribute="leading" secondItem="LZg-zS-RU0" secondAttribute="leading" id="99I-Ks-5XI"/>
-                                    <constraint firstAttribute="trailing" secondItem="kRh-Ji-hWg" secondAttribute="trailing" id="DG5-7I-Wiv"/>
+                                    <constraint firstItem="kRh-Ji-hWg" firstAttribute="leading" secondItem="LZg-zS-RU0" secondAttribute="leading" constant="96" id="99I-Ks-5XI"/>
+                                    <constraint firstAttribute="trailing" secondItem="kRh-Ji-hWg" secondAttribute="trailing" constant="94" id="DG5-7I-Wiv"/>
                                     <constraint firstAttribute="height" constant="50" id="I63-bI-Zi7"/>
                                     <constraint firstItem="kRh-Ji-hWg" firstAttribute="centerY" secondItem="LZg-zS-RU0" secondAttribute="centerY" id="QZJ-TX-SNz"/>
                                 </constraints>
@@ -249,7 +259,7 @@
                                     <constraint firstAttribute="height" constant="150" id="e0A-Kr-7fJ"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="american-express-card (1)" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-yH-soZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card3" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-yH-soZ">
                                 <rect key="frame" x="16" y="228" width="343" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="bvU-Fy-Z7h"/>
@@ -397,6 +407,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTH-ti-j6R" sceneMemberID="firstResponder"/>
+                <exit id="rIp-dg-1qK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2448.8000000000002" y="80.50974512743629"/>
         </scene>
@@ -758,7 +769,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Nishant                                         Below are your details from                 Customer 360" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-aM-mf9">
-                                <rect key="frame" x="16" y="20" width="343" height="100"/>
+                                <rect key="frame" x="16" y="40" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.2274509804" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4x7-uT-D47"/>
@@ -768,13 +779,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-BF-Iws">
-                                <rect key="frame" x="88" y="502" width="200" height="28"/>
+                                <rect key="frame" x="88" y="502" width="200" height="35"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.2274509804" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="6E0-Ag-AH9"/>
-                                    <constraint firstAttribute="height" constant="28" id="GA8-h0-PJY"/>
+                                    <constraint firstAttribute="height" constant="35" id="GA8-h0-PJY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="close:" destination="cSc-tu-7hr" eventType="touchUpInside" id="lM8-GK-6pa"/>
@@ -788,7 +799,7 @@
                             <constraint firstItem="Sug-aM-mf9" firstAttribute="leading" secondItem="a8L-9z-v7k" secondAttribute="leadingMargin" id="Fa1-3z-2aO"/>
                             <constraint firstItem="0D6-X7-XqH" firstAttribute="centerY" secondItem="a8L-9z-v7k" secondAttribute="centerY" id="JLc-NZ-73X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sug-aM-mf9" secondAttribute="trailing" id="W3K-Kd-bzi"/>
-                            <constraint firstItem="Sug-aM-mf9" firstAttribute="top" secondItem="iU4-v1-MpK" secondAttribute="bottom" id="Wiu-eS-aCW"/>
+                            <constraint firstItem="Sug-aM-mf9" firstAttribute="top" secondItem="iU4-v1-MpK" secondAttribute="bottom" constant="20" id="Wiu-eS-aCW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0D6-X7-XqH" secondAttribute="trailing" id="jzx-Ml-DTV"/>
                             <constraint firstItem="0D6-X7-XqH" firstAttribute="leading" secondItem="a8L-9z-v7k" secondAttribute="leadingMargin" id="qjx-UA-hXb"/>
                             <constraint firstItem="qAL-BF-Iws" firstAttribute="top" secondItem="0D6-X7-XqH" secondAttribute="bottom" constant="68" id="rnb-8F-qZe"/>
@@ -808,7 +819,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="american-express-card (1)" width="310" height="203"/>
+        <image name="Card3" width="147" height="93"/>
         <image name="close-white" width="24" height="24"/>
         <image name="user (1)" width="32" height="32"/>
     </resources>

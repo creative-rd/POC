@@ -35,9 +35,6 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     if let username = UserDefaults.standard.object(forKey: "Username") as? String{
       userNameTextField.text = username
-      
-      
-      
     }
     
     //Set up user interface
@@ -142,6 +139,12 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
       }
     }
   }
+  
+  @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
+  
+
+  }
+
   
   
   private func showHomeViewController() {
