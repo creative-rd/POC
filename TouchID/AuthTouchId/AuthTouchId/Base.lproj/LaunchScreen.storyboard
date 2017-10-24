@@ -34,9 +34,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="hao-l8-tQp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIO ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oG-4r-Wbg">
+                                <rect key="frame" x="131" y="308.5" width="113" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="4Yf-uj-lbd"/>
+                                    <constraint firstAttribute="height" constant="50.5" id="BT0-rd-o0D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9oG-4r-Wbg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0Pt-ey-Jrd"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DdH-vd-lMi" secondAttribute="bottom" constant="10" id="2dm-r0-YkE"/>
                             <constraint firstItem="hao-l8-tQp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="5KL-Fa-eox"/>
                             <constraint firstAttribute="trailing" secondItem="hao-l8-tQp" secondAttribute="trailing" id="7Mk-Ir-fHv"/>
@@ -44,6 +55,7 @@
                             <constraint firstItem="hao-l8-tQp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="M49-WY-4gG"/>
                             <constraint firstItem="hao-l8-tQp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ayw-Hc-iXf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DdH-vd-lMi" secondAttribute="trailing" id="efs-VE-O1f"/>
+                            <constraint firstItem="9oG-4r-Wbg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vSY-cV-x1B"/>
                             <constraint firstItem="hao-l8-tQp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xeG-3e-p0q"/>
                         </constraints>
                     </view>

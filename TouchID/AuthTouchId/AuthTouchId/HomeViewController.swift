@@ -67,7 +67,7 @@ class HomeViewController: UIViewController {
   }
   
   @IBAction func signOut(_ sender: Any) {
-    
+    performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
   }
   
   

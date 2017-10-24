@@ -35,6 +35,26 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     if let username = UserDefaults.standard.object(forKey: "Username") as? String{
       userNameTextField.text = username
+
+      DispatchQueue.main.async {        
+        KeychainItem.sharedInstance.retrieveValueFromKeychain(withUsername: username,completionHandler: { (success) in
+          if success {
+            self.showHomeViewController()
+          }
+        })
+      }
+    }
+    
+    if let saveUserIdValue = UserDefaults.standard.object(forKey: "saveUserID") as? Bool {
+      if touchIDSwitch.tag == 1 {
+        touchIDSwitch.isOn = saveUserIdValue
+      }
+    }
+
+    if let isTouchIdEnabledValue = UserDefaults.standard.object(forKey: "isTouchIdEnabled") as? Bool {
+      if touchIDSwitch.tag == 2 {
+        touchIDSwitch.isOn = isTouchIdEnabledValue
+      }
     }
     
     //Set up user interface
@@ -74,6 +94,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
       else {
         isTouchIdEnabled = false
       }
+      UserDefaults.standard.set(isTouchIdEnabled, forKey: "isTouchIdEnabled")
     }
     else{
       if switchValue.isOn {
@@ -82,6 +103,8 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
       else {
         saveUserID = false
       }
+      
+      UserDefaults.standard.set(saveUserID, forKey: "saveUserID")
     }
   }
   
@@ -140,9 +163,28 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     }
   }
   
+  //clean up on logout
   @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
-  
-
+    
+    KeychainItem.sharedInstance.deleteUserInfoFromKeychain(withUsername: self.userNameTextField.text!)
+    
+    if let _ = UserDefaults.standard.object(forKey: "saveUserID") as? Bool {
+      if touchIDSwitch.tag == 1 {
+        touchIDSwitch.isOn = false
+        UserDefaults.standard.removeObject(forKey: "saveUserID")
+      }
+    }
+    
+    if let _ = UserDefaults.standard.object(forKey: "isTouchIdEnabled") as? Bool {
+      if touchIDSwitch.tag == 2 {
+        touchIDSwitch.isOn = false
+        UserDefaults.standard.removeObject(forKey: "isTouchIdEnabled")
+      }
+    }
+    
+    UserDefaults.standard.removeObject(forKey: "Username")
+    self.userNameTextField.text = ""
+    self.passwordTextField.text = ""
   }
 
   
